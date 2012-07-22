@@ -14,10 +14,18 @@
 </p>
 
 <h3>Current guests</h3>
-<table id="invitees">
-  <%= render @invitations %>
+<table id="invitees" class="table table-bordered table-striped">
+  <thead>
+    <tr>
+      <th>Name</th>
+      <th>Email</th>
+      <th>Phone</th>
+    </tr>
+  </thead>
+  <tbody>
+    <%= render @invitations %>
+  </tbody>
 </table>
-
 
 <% if can? :update, @event %>
   <h3>Add a guest</h3>
